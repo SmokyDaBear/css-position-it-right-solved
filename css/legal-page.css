@@ -1,8 +1,12 @@
 .legal-header {
+  /*position set to fixed to keep the header at the top of the page*/
+  position: fixed;
   background-color: #e2e2e2;
   padding: 30px;
   margin-top: 60px;
   width: 100%;
+  /*changed the z-index to 1 to ensure it stays on top layer of the content*/
+  z-index: 1;
 }
 
 .legal-header h1 {
@@ -12,6 +16,10 @@
 }
 
 main {
+  padding-top: 150px;
+  padding-bottom: 120px;
+  /*adding padding to the top and bottom of the main content to avoid overlap with the fixed header 
+  and footer*/
 }
 
 section {
@@ -30,6 +38,10 @@ section {
   background-color: #2b2d3b;
   height: max-content;
   padding: 10px 16px;
+  /*make the position sticky:*/
+  position: sticky;
+  top: 180px;
+  /*set the top height so header does not overlap with the section label*/
 }
 
 .document-content {
@@ -59,6 +71,9 @@ footer {
   background-color: #e2e2e2;
   padding: 0 30px;
   min-height: 70px;
+  /*set position to fixed to keep the footer at the bottom of the page*/
+  position: fixed;
+  bottom: 0;
 }
 
 .footer-content {
